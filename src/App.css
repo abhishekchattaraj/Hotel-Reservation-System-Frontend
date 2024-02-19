@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito', sans-serif;
+  background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
+  /*background: linear-gradient(109.5deg, rgb(13, 11, 136) 9.4%, rgb(86, 255, 248) 78.4%);*/
+  /*background: url("./images/pexels-asad-photo-maldives-1268871.jpg") center/cover no-repeat;*/
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primaryColor: #008cff;
+  --mainWhite: #fff;
+  --offWhite: #f7f7f7;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --darkGrey: #cfcfcf;
+  --mainTransition: all 0.3s linear;
+  --mainSpacing: 3px;
+  --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
+  --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+}
+/* globals */
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  margin-bottom: 0.5em;
+}
+h2 {
+  font-size: 2em;
+  margin-bottom: 0.75em;
+}
+h3 {
+  font-size: 1.5em;
+  line-height: 1;
+  margin-bottom: 1em;
+}
+h4 {
+  font-size: 1.2em;
+  line-height: 1.25;
+  margin-bottom: 1.25em;
+}
+h5 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+h6 {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 1.5em;
+}
+
+.btn-primary {
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: var(--mainSpacing);
+  color: var(--mainBlack);
+  background: var(--primaryColor);
+  padding: 0.4rem 0.9rem;
+  border: 3px solid var(--primaryColor);
+  border-radius: 14px;
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btn-warning {
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: var(--mainSpacing);
+  color: var(--mainBlack);
+  background: var(--primaryColor);
+  padding: 0.4rem 0.9rem;
+  border: 3px solid var(--primaryColor);
+  transition: var(--mainTransition);
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btn-primary:hover{
+  text-decoration: none;
+  background: #8cff1a!important;
+  color: #fff!important;
+}
+.btn-warning:hover{
+  text-decoration: none;
+  background: transparent!important;
+  color: yellow!important;
+}
+.loading {
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 3rem;
+}
+.roomerror{
+  margin-top: 100px;
+}
+.roomerror:hover .error{
+  background-color: #2C3E50;
+  color: #ffffff!important;
+}
+.error {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
+.empty-search {
+  text-align: center;
+  text-transform: capitalize;
+  margin: 2rem 0;
+  padding: 1rem;
+  letter-spacing: var(--mainSpacing);
+}
+
+/* end of globals */
+/* Navbar */
+.nav-link{
+  padding: 8px 15px;
+  margin-left: 10px;
+  margin-right: 20px;
+  font-size: 18px;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: .5s linear;
+  font-weight: 800;
+  -webkit-transition: .5s linear;
+  -moz-transition: .5s linear;
+  -ms-transition: .5s linear;
+  -o-transition: .5s linear;
+}
+.bg-transparent.scrolled {
+  background-color: black!important;
+  transition:500ms ease;
+}
+
+.navbar-brand{
+  font-size: 32px!important;
+  color: #ffffff!important;
+}
+.nav-link:hover{
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
+}
+.nav-link.active_class{
+color: #ffffff;
+border: 2px solid #ffffff;
+font-weight: 800;
+}
+
+.form-control{
+border: 2px solid #000;
+}
+.form-control:focus,
+.form-control.active {
+  border: 2px solid #000000!important;
+}
+textarea:focus, 
+textarea.form-control:focus, 
+input.form-control:focus, 
+input[type=text]:focus, 
+input[type=password]:focus, 
+input[type=email]:focus, 
+input[type=number]:focus, 
+[type=text].form-control:focus, 
+[type=password].form-control:focus, 
+[type=email].form-control:focus, 
+[type=tel].form-control:focus, 
+[contenteditable].form-control:focus {
+box-shadow: inset 0 -1px 0 #ddd;
+}
+
+
+/* end of navbar */
+/* Hero */
+.defaultHero,
+.roomsHero {
+  min-height: calc(100vh - 0px);
+  background: url("../public/images/pexels-asad-photo-maldives-1268871.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.roomsHero {
+  background-image: url("../public/images/dashboard.jpg");
+  min-height: calc(100vh - 0px);
+}
+.singleRoom {
+  background-image: url("../public/images/room-3.jpeg");
+  min-height: calc(100vh - 0px);
+}
+.roomsError{
+  background-image: url("../public/images/error.jpg");
+  min-height: calc(100vh - 0px);
+}
+.bookingsHero {
+  background-image: url("../public/images/MyBookings.jpg");
+  
+  min-height: calc(100vh - 0px);
+}
+.lost{
+  font-size: 44px;
+  color: yellow;
+  text-align: center;
+}
+/* End of Hero */
+/* Banner */
+.banner {
+  display: inline-block;
+  position: absolute!important;
+  background: rgba(0, 0, 0, 0.5)!important;
+  color: var(--mainWhite);
+  text-align: center;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.banner h1 {
+  font-size: 44px!important;
+}
+.banner div {
+  width: 10rem;
+  height: 5px;
+  background: var(--primaryColor);
+  margin: 1.7rem auto;
+}
+.banner p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 576px) {
+  .banner {
+    padding: 2rem 3rem!important
+  }
+  .banner h1 {
+    font-size: 32px!important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .banner {
+    padding: 2rem 6rem;
+  }
+  .banner h1 {
+    font-size: 4rem;
+  }
+}
+/* End of Banner */
+/* Title */
+.section-title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.section-title h4 {
+  font-size: 2rem;
+  letter-spacing: var(--mainSpacing);
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.section-title div {
+  width: 5rem;
+  height: 5px;
+  margin: 0 auto;
+  background: var(--primaryColor);
+}
+/* end of Title */
+
+/* services */
+.services {
+  padding: 3rem 0;
+}
+.services {
+  background: #EBF5FB;
+  text-align: center;
+}
+
+.service span {
+  display: inline-block;
+  color: var(--primaryColor);
+  font-size: 80px;
+  margin-bottom: 1.5rem;
+  transition: color 1s;
+}
+.services span:hover{
+  color: #3c1263;
+}
+.services h6 {
+  letter-spacing: var(--mainSpacing);
+  font-weight: 1000;
+  text-transform: capitalize;
+}
+.services p {
+  width: 80%;
+  margin: 0 auto;
+}
+@media screen and (min-width: 992px) {
+  .services-center {
+    width: 95vw;
+    max-width: 1170px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .services p {
+    width: 100%;
+  }
+}
+/*end of services */
+/* featured rooms */
+
+.featured-rooms {
+  padding: 5rem 0;
+}
+
+/* end pf featured rooms */
+
+/* login */
+.login-register-h1{
+  color: #fff;
+}
+
+
+div.auth-form-container
+{
+    display: block;
+    text-align: center;
+}
+
+
+.auth-form-container
+{
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    margin-top: 10%;
+    margin-left: 25%;
+    margin-bottom: 2.7%;
+    padding: 5%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #fff;
+    border-radius: 5%;
+}
+
+
+.login-form, .register-form{
+  display: flex;
+  flex-direction: column;
+}
+
+.login-page-label{
+  font-size: medium;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-bottom: 0%;
+}
+
+.login-page-input{
+  width: 50%;
+  margin: auto;
+  padding: 2%;
+  border: none;
+  border-radius: 40px;
+}
+
+.login-register-btn{
+  border: none;
+  background-color:white;
+  width: 40%;
+  padding: 2%;
+  margin-top: 5%;
+  margin-left: 30%;
+  margin-bottom: 5%;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.9s;
+}
+
+.login-register-btn:hover{
+  background-color: #8cff1a;
+}
+
+.logreg-btn{
+  color: #fff;
+  background: none;
+  text-decoration: underline;
+  transition: 0.5s;
+  padding: 20px;
+  margin:auto;
+  border: none;
+}
+
+.logreg-btn:hover{
+  color:#8cff1a;
+}
+/* end of login */
+
+/* Start of Register */
+.register-page-label{
+  font-size: medium;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  margin-bottom: 0%;
+}
+
+.register-page-input{
+  width: 50%;
+  margin: auto;
+  padding: 2%;
+  border: none;
+  border-radius: 40px;
+}
+/*End of Register*/
+
+/*Start of Reservation*/
+div.reservation-container
+{
+    display: block;
+    text-align: center;
+}
+
+
+.reservation-container
+{
+    display: block;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    margin-top: 10%;
+    margin-left: 25%;
+    margin-bottom: 2.7%;
+    padding: 5%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #fff;
+    border-radius: 5%;
+}
+
+.reservation-form{
+  display: block;
+  flex-direction: row;
+}
+
+.reservation-page-label{
+  
+  font-size: large;
+  color: #fff;
+  height: 20px;
+  width: 200px;
+  margin-top: 50px;
+  margin-left: 10px;
+  padding-right: auto;
+  text-align: right;
+  clear: both;
+  float:left;
+  margin-right:15px;
+}
+
+.reservation-page-input{
+  height: 40px;
+  width: 50%;
+  border: none;
+  border-radius: 15px;
+  margin: 10px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  padding-left: 1%;
+  padding-right: 1%;
+  float: left;
+}
+
+.reservation-btn{
+  display: inline;
+  font-size: large;
+  font-weight: bolder;
+  border: none;
+  background-color:white;
+  width: 40%;
+  padding: 2%;
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+
+.reservation-btn:hover{
+  background-color: #8cff1a;
+}
+
+/* Search table */
+.img{
+  height: 200px;
+  width: 80%;
+  margin-right: 15%;
+  border: none;
+  border-radius: 10px;
+}
+
+.roomType-text{
+  font-size: large;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+/* End of Search table */
+
+.cancel-btn{
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 5%;
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.7s;
+}
+
+.cancel-btn:hover{
+  background-color: red;
+  color: #fff;
+}
